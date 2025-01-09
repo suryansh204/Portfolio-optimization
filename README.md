@@ -37,6 +37,20 @@ To run this project, you will need:
 - Python 3.8+
 - Libraries: `yfinance`, `numpy`, `pandas`, `scipy`, `matplotlib`
 
+### Visualization
+
+The Efficient Frontier represents the optimal portfolios that offer the highest expected return for a given level of risk.
+
+#### Example: Two-Asset Portfolio (No Short Selling)
+Below is the Efficient Frontier for a two-asset portfolio containing Coca-Cola and NVIDIA stocks:
+
+![Efficient Frontier](path-to-image/efficient_frontier.png)
+
+- **Blue Curve**: Shows the tradeoff between risk (volatility) and return for different portfolios.
+- **Red Point**: Represents the optimal portfolio for Coca-Cola.
+- **Green Point**: Represents the optimal portfolio for NVIDIA.
+
+
 
 ### Usage
 1. Edit the asset tickers and date range in the script to specify your portfolio.
