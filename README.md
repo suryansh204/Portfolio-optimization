@@ -51,6 +51,13 @@ Below is the Efficient Frontier for a two-asset portfolio containing Coca-Cola a
 - **Green Point**: Represents the optimal portfolio for NVIDIA.
 
 
+### Testing and Validation
+
+To validate the portfolio optimization algorithm, we tested it using predefined inputs. Below are the results:
+![Test Fail:](test_f.png)
+![Test Pass:](test_s.png)
+
+
 
 ### Usage
 1. Edit the asset tickers and date range in the script to specify your portfolio.
