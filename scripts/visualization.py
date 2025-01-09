@@ -2,47 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import minimize
 
-# def plot_efficient_frontier(mean_returns, cov_matrix, target_return):
-#     num_assets = len(mean_returns)
-#     initial_weights = np.ones(num_assets) / num_assets
-
-#     # Range of target returns
-#     target_returns = np.linspace(0.001, 0.02, 50)
-#     risks = []
-
-#     for target in target_returns:
-#         constraints = [
-#             {"type": "eq", "fun": lambda weights: np.sum(weights) - 1},
-#             {"type": "eq", "fun": lambda weights: np.dot(weights, mean_returns) - target},
-#         ]
-#         bounds = [(0, 1) for _ in range(num_assets)]
-
-#         result = minimize(
-#             lambda weights: np.dot(weights.T, np.dot(cov_matrix, weights)),  # Portfolio variance
-#             initial_weights,
-#             method="SLSQP",
-#             bounds=bounds,
-#             constraints=constraints,
-#         )
-#         risks.append(np.sqrt(result.fun))  # Standard deviation of portfolio
-
-#     # Find the index of the closest target_return
-#     target_index = (np.abs(target_returns - target_return)).argmin()
-
-#     # Plotting the Efficient Frontier
-#     plt.figure(figsize=(10, 6))
-#     plt.plot(risks, target_returns, label="Efficient Frontier", color="blue")
-#     plt.scatter(risks[target_index], target_returns[target_index], color="red", label="Target Portfolio")
-#     plt.xlabel("Risk (Standard Deviation)")
-#     plt.ylabel("Return")
-#     plt.title("Efficient Frontier")
-#     plt.legend()
-#     plt.grid(True)
-#     plt.show()
-import matplotlib.pyplot as plt
-import numpy as np
-from scipy.optimize import minimize
-
 def plot_two_asset_frontier(mean_returns, cov_matrix, asset_names=None, target_return = None):
     """
     Plot the efficient frontier for two assets using a simple parametric approach:
@@ -78,7 +37,7 @@ def plot_two_asset_frontier(mean_returns, cov_matrix, asset_names=None, target_r
     plt.figure(figsize=(8, 5))
     plt.plot(portfolio_risks, portfolio_returns, label="2-Asset Frontier", color="blue")
 
-    # Also mark the individual assets themselves
+   
     plt.scatter(np.sqrt(var1), mu1, color="red", 
                 label=asset_names[0] if asset_names else "Asset 1")
     plt.scatter(np.sqrt(var2), mu2, color="green", 

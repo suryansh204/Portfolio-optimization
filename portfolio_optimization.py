@@ -10,10 +10,10 @@ if __name__ == "__main__":
     target_return = 0.0051 
     data, daily_returns, mean_returns, cov_matrix = fetch_and_process_data()
 
-    # Step 2: Optimization
+    #  Model
     optimal_weights = optimize_portfolio(mean_returns, cov_matrix, target_return)
 
-    # Step 3: Visualization 
+    # Visualization 
     plot_two_asset_frontier(mean_returns, cov_matrix,
                         asset_names=["Coca-Cola", "NVIDIA"],
                         target_return=0.0002)
