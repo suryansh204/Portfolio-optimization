@@ -25,10 +25,14 @@ def fetch_and_process_data():
     # Calculate mean returns and covariance matrix
     mean_returns = daily_returns.mean()
     cov_matrix = daily_returns.cov()
-    if not os.path.exists("data"):
-     os.makedirs("data")
+   
     
-    close_prices.to_csv("data/close_prices.csv")
-    daily_returns.to_csv("data/daily_returns.csv")
+    output_dir = "data"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    # Save processed data
+    close_prices.to_csv(os.path.join(output_dir, "close_prices.csv"))
+    daily_returns.to_csv(os.path.join(output_dir, "daily_returns.csv"))
 
     return close_prices, daily_returns, mean_returns, cov_matrix
