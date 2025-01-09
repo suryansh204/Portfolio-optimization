@@ -44,7 +44,7 @@ The Efficient Frontier represents the optimal portfolios that offer the highest 
 #### Example: Two-Asset Portfolio (No Short Selling)
 Below is the Efficient Frontier for a two-asset portfolio containing Coca-Cola and NVIDIA stocks:
 
-![Efficient Frontier](path-to-image/efficient_frontier.png)
+![Efficient Frontier](effecient_frontier.png)
 
 - **Blue Curve**: Shows the tradeoff between risk (volatility) and return for different portfolios.
 - **Red Point**: Represents the optimal portfolio for Coca-Cola.
