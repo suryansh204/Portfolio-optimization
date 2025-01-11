@@ -8,7 +8,7 @@ This project showcases the implementation of a Portfolio Optimization Model in P
 2. **Efficient Frontier Visualization**: Demonstrates the trade-off between risk and return for different portfolio combinations.
    
 ### Future Plans
-To enhance and expand this project, the following improvements are planned:
+This project is for now a proof of concept, but in future I plan to enhance and expand this project, the following are some of the improvements I am planning to implement:
 
 1. **Multi-Asset Portfolios**
    - Extend the model to handle portfolios with more than two assets.
